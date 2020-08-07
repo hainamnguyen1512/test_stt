@@ -3,6 +3,7 @@
 import subprocess
 import timeit
 from flask import Flask, render_template, request, jsonify
+import os
 from werkzeug.utils import secure_filename
 # from correct_spell import get_best_sentence
 app = Flask(__name__, template_folder='./')
@@ -27,9 +28,25 @@ def getOutput(filetype, part):
     
     return [output, str(elapsed)]
 
+
+def change_file_name(path):
+    for count, filename in enumerate(os.listdir(path)):
+        dst = "test_" + str(count) + ".wav"
+        src = path + filename
+        dst = path + dst
+        os.rename(src, dst)
+    return os.listdir(path)
+
+
 @app.route('/')
 def main():
-    return render_template('index.html')
+    # files_path = [os.path.abspath(x) for x in os.listdir()]
+    # print(files_path)
+    dir_ctkv_01 = "C:/Users/PMNB/Desktop/wav/stt_demo/web app/static/CTKV_01/"
+    list_files = change_file_name(dir_ctkv_01)
+    print(list_files)
+    # process list file
+    return render_template('index.html', list_files=list_files)
 
 @app.route('/uploadfile',methods=['POST'])
 def uploadFile():

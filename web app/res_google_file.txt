@@ -1,1 +1,1 @@
-tiếng Việt trình độ A tập 1 bài học số 1 hội thoại chào bà chào cô Xin lỗi bà tên là gì Tôi tên là ăn hội thoại B3 là người nước nào tôi là người Đức chào chị tôi về nhé Vâng anh về ạ tập đọc 5 1 2 3 4 5 5 6 7 8 9 10 bài tập 162 người anh 6 người phát mà người Đức 7 người Hàn Quốc chín người Nhật bốn người Việt Nam tập đọc 1 8 8 5 7 1 5 9 6 5 7 7 3 3 8 2 3 9 7 4 5 8 8 6 0 6 6 2 1 4 3 7 6 8 2 9 2 9 5 9 5 5 6 0 0 7 2 3 bà xã bà bá Bạn Hàn Hàn hãng Hàn Hán hạn trao chào cháo chảo cháo cháo
+missing PocketSphinx module: ensure that PocketSphinx is set up correctly.

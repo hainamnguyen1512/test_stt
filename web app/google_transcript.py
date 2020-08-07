@@ -15,7 +15,9 @@ with sr.AudioFile(AUDIO_FILE) as source:
     audio = r.record(source)
 
 try:
-    res = r.recognize_google(audio, language='vi-VN')
+    # res = r.recognize_google(audio, language='vi-VN')
+    res = r.recognize_sphinx(audio, language='vi-VN')
+    # res = r.recognize_wit(audio, key="293915438362851")
     print('\n Google transcript: \n')
     print(res)
     outputfile.write(res)
